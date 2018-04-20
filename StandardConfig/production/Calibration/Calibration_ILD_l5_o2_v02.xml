@@ -35,6 +35,9 @@
 <!-- dEdX error factor depends on large/small detector flavor -->
 <constant name="dEdXErrorFactor">7.55</constant>
 
+<!-- dEdX smearing factor depends on large/small detector flavor -->
+<constant name="dEdXSmearingFactor">0.035</constant>
+
 <!-- Particle identification PDF root file for l5(l4) detector -->
 <constant name="PidPDFFile" value="HighLevelReco/PIDFiles/LikelihoodPID_Standard_l5_v01.root" />
 <!-- Particle identification BDT weights file for low momemtum mu/pi separation -->
@@ -61,5 +64,14 @@
 </constant>
 
 <!-- SimCalorimeterHit collection names. Necessary to deal with hybrid reconstruction -->
-<constant name="ECalSimHitCollections">ECalBarrelSiHitsEven ECalBarrelSiHitsOdd ECalEndcapSiHitsEven ECalEndcapSiHitsOdd EcalEndcapRingCollection</constant>
-<constant name="HCalSimHitCollections">HCalBarrelRPCHits HCalECRingRPCHits HCalEndcapRPCHits</constant>
+<constant name="ECalBarrelSimHitCollections">ECalBarrelSiHitsEven ECalBarrelSiHitsOdd</constant>
+<constant name="ECalEndcapSimHitCollections">ECalEndcapSiHitsEven ECalEndcapSiHitsOdd</constant>
+<constant name="ECalRingSimHitCollections">EcalEndcapRingCollection</constant>
+
+<constant name="HCalBarrelSimHitCollections">HCalBarrelRPCHits</constant>
+<constant name="HCalEndcapSimHitCollections">HCalEndcapRPCHits</constant>
+<constant name="HCalRingSimHitCollections">HCalECRingRPCHits</constant>
+
+<constant name="ECalSimHitCollections">${ECalBarrelSimHitCollections} ${ECalEndcapSimHitCollections} ${ECalRingSimHitCollections}</constant>
+<constant name="HCalSimHitCollections">${HCalBarrelSimHitCollections} ${HCalEndcapSimHitCollections} ${HCalRingSimHitCollections}</constant>
+

@@ -14,9 +14,9 @@
 <constant name="PandoraMuonToMip">10.3093</constant>
 <constant name="PandoraEcalToEMScale">1.0</constant>
 <constant name="PandoraHcalToEMScale">1.0</constant>
-<constant name="PandoraEcalToHadBarrelScale">1.20499007655</constant>
-<constant name="PandoraEcalToHadEndcapScale">1.20499007655</constant>
-<constant name="PandoraHcalToHadScale">0.992344768925</constant>
+<constant name="PandoraEcalToHadBarrelScale">1.31</constant>
+<constant name="PandoraEcalToHadEndcapScale">1.31</constant>
+<constant name="PandoraHcalToHadScale">0.98</constant>
 <constant name="PandoraSoftwareCompensationWeights">1.45525 -0.0243366 0.000133654 -0.0529633 0.00148587 -2.11343e-05 0.136194 0.151678 -0.0514051</constant>
 
 <!-- Ecal technology : SiWEcal or ScEcal -->
@@ -34,6 +34,9 @@
 
 <!-- dEdX error factor depends on large/small detector flavor -->
 <constant name="dEdXErrorFactor">8.53</constant>
+
+<!-- dEdX smearing factor depends on large/small detector flavor -->
+<constant name="dEdXSmearingFactor">0.044</constant>
 
 <!-- Particle identification PDF root file for s5(s4) detector -->
 <constant name="PidPDFFile" value="HighLevelReco/PIDFiles/LikelihoodPID_Standard_s5_v01.root" />
@@ -61,5 +64,14 @@
 </constant>
 
 <!-- SimCalorimeterHit collection names. Necessary to deal with hybrid reconstruction -->
-<constant name="ECalSimHitCollections">ECalBarrelScHitsEven ECalBarrelScHitsOdd ECalEndcapScHitsEven ECalEndcapScHitsOdd EcalEndcapRingCollection</constant>
-<constant name="HCalSimHitCollections">HCalBarrelRPCHits HCalECRingRPCHits HCalEndcapRPCHits</constant>
+<constant name="ECalBarrelSimHitCollections">ECalBarrelScHitsEven ECalBarrelScHitsOdd</constant>
+<constant name="ECalEndcapSimHitCollections">ECalEndcapScHitsEven ECalEndcapScHitsOdd</constant>
+<constant name="ECalRingSimHitCollections">EcalEndcapRingCollection</constant>
+
+<constant name="HCalBarrelSimHitCollections">HCalBarrelRPCHits</constant>
+<constant name="HCalEndcapSimHitCollections">HCalEndcapRPCHits</constant>
+<constant name="HCalRingSimHitCollections">HCalECRingRPCHits</constant>
+
+<constant name="ECalSimHitCollections">${ECalBarrelSimHitCollections} ${ECalEndcapSimHitCollections} ${ECalRingSimHitCollections}</constant>
+<constant name="HCalSimHitCollections">${HCalBarrelSimHitCollections} ${HCalEndcapSimHitCollections} ${HCalRingSimHitCollections}</constant>
+
