@@ -46,10 +46,7 @@
     <!--The BeamCal calibration constant, sim hit energy to calibrated calo hit energy-->
     <constant name="BeamCalCalibrationFactor">79.6</constant>
     
-    <!-- ***** Input files constants ***** -->    
-    <!-- Special Beamcal overlay background file -->
-    <constant name="BeamCalBackgroundFile" value="HighLevelReco/BeamCalBackground/BeamCalBackground-E500-B3.5-RealisticNominalAntiDid.root" />
-    
+    <!-- ***** Input files constants ***** -->        
     <!-- Geometry model dependant calibration constants from external file -->
     <include ref="${CalibrationFile}" />
     
@@ -284,7 +281,7 @@
     <parameter name="LCalCollections" type="StringVec" lcioInType="CalorimeterHit">LCAL</parameter>
 
     <!--Whether to collect calibration details-->
-    <parameter name="CollectCalibrationDetails" type="int"> 1 </parameter>
+    <parameter name="CollectCalibrationDetails" type="int"> 0 </parameter>
     <!--Name of the ECal collection post ddsim, pre digitisation-->
     <parameter name="ECalCollectionsSimCaloHit" type="StringVec" lcioInType="SimCalorimeterHit">${ECalSimHitCollections}</parameter>
     <!--Name of the HCal Barrel collection post ddsim, pre digitisation-->
