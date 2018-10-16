@@ -75,7 +75,7 @@
 	<parameter name="FlavorTag.JetCollectionName" type="string" value="RefinedJets" />
 	<parameter name="MakeNtuple.AuxiliaryInfo" type="int" value="-1" />
 	
-	<parameter name="FlavorTag.WeightsDirectory" type="string" value="lcfiweights" />
+	<parameter name="FlavorTag.WeightsDirectory" type="string" value="lcfiweights/6q500_ilds5v02_test00_100k" />
 	<parameter name="FlavorTag.WeightsPrefix" type="string" value="6q500_ilds5v02_test00_100k" />
 	<parameter name="FlavorTag.BookName" type="string" value="bdt" />
 	<parameter name="FlavorTag.PIDAlgo" type="string" value="lcfiplus" />
