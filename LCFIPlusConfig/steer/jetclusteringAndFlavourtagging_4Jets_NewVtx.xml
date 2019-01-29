@@ -12,7 +12,7 @@ __INPUTFILES__
 	<parameter name="SkipNEvents" value="0" />  
 	<parameter name="SupressCheck" value="false" />  
 	<parameter name="GearXMLFile"> 
-/cvmfs/ilc.desy.de/sw/ILDConfig/v02-00-01/StandardConfig/production/Gear/gear_ILD_s5_v02.xml
+__GEARFILE__
         </parameter>  
 	<parameter name="Verbosity" options="DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT">WARNING</parameter> 
 </global>
@@ -36,7 +36,7 @@ __INPUTFILES__
         <parameter name="JetClustering.PrimaryVertexCollectionName" type="string" value="PrimaryVertex_NewVtx" />
 	<parameter name="JetClustering.InputVertexCollectionName" type="string" value="BuildUpVertex_NewVtx" /> <!-- vertex collections to be used in JC -->
 	<parameter name="JetClustering.OutputJetCollectionName" type="stringVec" value="VertexJets" /> <!-- output collection name, may be multiple -->
-	<parameter name="JetClustering.NJetsRequested" type="intVec" value="6" /> <!-- Multiple NJets can be specified -->
+	<parameter name="JetClustering.NJetsRequested" type="intVec" value="4" /> <!-- Multiple NJets can be specified -->
 	<parameter name="JetClustering.YCut" type="doubleVec" value="0." /> <!-- specify 0 if not used -->
 
 	<parameter name="JetClustering.JetAlgorithm" type="string" value="DurhamVertex" /> <!-- jet algorithm -->
@@ -78,12 +78,12 @@ __INPUTFILES__
 	<parameter name="FlavorTag.JetCollectionName" type="string" value="RefinedJets" />
 	<parameter name="MakeNtuple.AuxiliaryInfo" type="int" value="-1" />
 	
-        <parameter name="FlavorTag.WeightsDirectory" type="string" value="__INPUTPREFIX2__"/> 
-	<parameter name="FlavorTag.WeightsPrefix" type="string" value="__INPUTPREFIX3__" />
+        <parameter name="FlavorTag.WeightsDirectory" type="string" value="__WIGHTDIR__"/> 
+	<parameter name="FlavorTag.WeightsPrefix" type="string" value="__PREFIX__" />
 	<parameter name="FlavorTag.BookName" type="string" value="bdt" />
 	<parameter name="FlavorTag.PIDAlgo" type="string" value="lcfiplus" />
-        <parameter name="FlavorTag.D0ProbFileName" type="string" value="__INPUTPREFIX__/d0.root"/> 
-        <parameter name="FlavorTag.Z0ProbFileName" type="string" value="__INPUTPREFIX__/z0.root"/> 
+        <parameter name="FlavorTag.D0ProbFileName" type="string" value="vtxprob/__D0FILE__"/> 
+        <parameter name="FlavorTag.Z0ProbFileName" type="string" value="vtxprob/__Z0FILE__"/> 
         	
 	<parameter name="FlavorTag.CategoryDefinition1" type="string">nvtx==0</parameter>
 	<parameter name="FlavorTag.CategoryPreselection1" type="string">trk1d0sig!=0</parameter>
